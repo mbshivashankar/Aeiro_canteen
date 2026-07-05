@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aeiro Canteen</title>
+    <meta name="description" content="Modern canteen management dashboard for daily orders and meals." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">AE</div>
+        <div>
+          <p class="eyebrow">Smart Canteen</p>
+          <h1>Aeiro Canteen</h1>
+        </div>
+      </div>
+      <nav class="topnav">
+        <a href="#menu">Menu</a>
+        <a href="#orders">Orders</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Fresh meals all day</p>
+          <h2>Quick orders, happy students, and smooth service.</h2>
+          <p>
+            Run your cafeteria smarter with a simple menu, fast order handling, and a clean daily dashboard.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#menu">Browse menu</a>
+            <a class="btn btn-secondary" href="#orders">Track orders</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Today’s highlights</h3>
+          <ul>
+            <li>Lunch combo: ₹120</li>
+            <li>Fresh juice bar: ₹60</li>
+            <li>Vegetarian thali: ₹150</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Canteen statistics">
+        <article>
+          <strong>96%</strong>
+          <span>On-time prep</span>
+        </article>
+        <article>
+          <strong>24/7</strong>
+          <span>Kitchen support</span>
+        </article>
+        <article>
+          <strong>150+</strong>
+          <span>Daily orders</span>
+        </article>
+      </section>
+
+      <section id="menu" class="panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Menu</p>
+            <h3>Choose your meal</h3>
+          </div>
+          <p class="muted">Made fresh and served fast.</p>
+        </div>
+        <div id="menuGrid" class="menu-grid"></div>
+      </section>
+
+      <section class="content-grid">
+        <section id="orders" class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Order panel</p>
+              <h3>Current basket</h3>
+            </div>
+          </div>
+          <div id="cartItems" class="cart-items"></div>
+          <div class="cart-summary">
+            <div>
+              <span>Items</span>
+              <strong id="cartCount">0</strong>
+            </div>
+            <div>
+              <span>Total</span>
+              <strong id="cartTotal">₹0</strong>
+            </div>
+          </div>
+          <button id="checkoutBtn" class="btn btn-primary full-width">Place order</button>
+          <p id="checkoutMessage" class="status-message" aria-live="polite"></p>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Live status</p>
+              <h3>Kitchen updates</h3>
+            </div>
+          </div>
+          <ul class="status-list">
+            <li><span>Veg meal</span><strong>Preparing</strong></li>
+            <li><span>Soup</span><strong>Ready</strong></li>
+            <li><span>Tea</span><strong>Delivered</strong></li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <p>Contact the canteen desk at +91 98765 43210</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
